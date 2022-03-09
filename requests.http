@@ -2,3 +2,6 @@ GET http://localhost:3000/first-item
 
 ###
 GET http://localhost:3000/all-items
+
+###
+GET http://localhost:3000/last-item

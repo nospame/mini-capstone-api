@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   get "/first-item" => "products#show_first"
   get "/all-items" => "products#show_all"
+  get "/last-item" => "products#show_last"
 end
