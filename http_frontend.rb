@@ -10,10 +10,8 @@ require 'tty-table'
 # puts "Price: $#{first_product["price"]}"
 # puts "Image: #{first_product["image_url"]}"
 
-
 all_products = HTTP.get "http://localhost:3000/all-items"
 all_products = all_products.parse(:json)["products"]
-# puts all_products.to_a
 
 # all_products.each do |product|
 #   puts "Product name: #{product["name"]}"
@@ -24,14 +22,9 @@ all_products = all_products.parse(:json)["products"]
 # end
 
 product_table = TTY::Table.new(["Name", "Price", "Description"],[])
-product_array = []
 all_products.each do |product|
   product_array = [product["name"], product["price"], product["description"]]
   product_table << product_array
 end
 
 puts product_table.render(:ascii)
-
-
-
-
