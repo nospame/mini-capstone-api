@@ -18,9 +18,15 @@ class ProductsController < ApplicationController
       price: last_product.price, image_url: last_product.image_url, description: last_product.description}
   end
 
-  def by_lookup
+  def by_id
     product_id = params[:id]
     product_info = Product.find(product_id)
+    render json: product_info.as_json
+  end
+
+  def by_name
+    product_name = params[:name]
+    product_info = Product.find_by(name: product_name)
     render json: product_info.as_json
   end
 
