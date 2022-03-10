@@ -11,7 +11,7 @@ require 'tty-table'
 # puts "Image: #{first_product["image_url"]}"
 
 all_products = HTTP.get "http://localhost:3000/all-items"
-all_products = all_products.parse(:json)["products"]
+all_products = all_products.parse(:json)
 
 # all_products.each do |product|
 #   puts "Product name: #{product["name"]}"

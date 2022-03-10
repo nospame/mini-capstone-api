@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
 
   def show_all
     all_products = Product.all
-    render json: {products: all_products}
+    render json: all_products.as_json
   end
 
   def show_last
@@ -17,4 +17,11 @@ class ProductsController < ApplicationController
       name: last_product.name, 
       price: last_product.price, image_url: last_product.image_url, description: last_product.description}
   end
+
+  def by_lookup
+    product_id = params[:id]
+    product_info = Product.find(product_id)
+    render json: product_info.as_json
+  end
+
 end

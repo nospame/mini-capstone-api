@@ -5,3 +5,9 @@ GET http://localhost:3000/all-items
 
 ###
 GET http://localhost:3000/last-item
+
+###
+GET http://localhost:3000/lookup?id=3
+
+###
+GET http://localhost:3000/lookup/3
