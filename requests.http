@@ -1,7 +1,7 @@
 GET http://localhost:3000/products
 
 ###
-GET http://localhost:3000/products/3
+GET http://localhost:3000/products/11
 
 ###
 POST http://localhost:3000/products
@@ -13,3 +13,15 @@ content-type: application/json
   "description": "Peanut butter, chocolate cookie, milk chocolate",
   "image_url": "https://i.pinimg.com/originals/00/2f/5e/002f5e8ad34dcbb53bfe4e28a6c7538f.jpg"
 } 
+
+###
+PATCH http://localhost:3000/products/9
+content-type: application/json
+
+{
+	"name": "Hershey's Chocolate Cup",
+  "price": 2
+} 
+
+###
+DELETE http://localhost:3000/products/9
