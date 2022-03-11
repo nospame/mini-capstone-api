@@ -22,13 +22,14 @@ class ProductsController < ApplicationController
 
   def update
     product = Product.find_by(id: params[:id])
-
-    product.update(
-      name: params[:name] || product.name,
-      price: params[:price] || product.price,
-      description: params[:description] || product.description,
-      image_url: params[:image_url] || product.image_url
-    )
+    if product && product.update(
+        name: params[:name] || product.name,
+        price: params[:price] || product.price,
+        description: params[:description] || product.description,
+        image_url: params[:image_url] || product.image_url
+      )
+    end
+    # end
 
     # product.name = params[:name] || product.name
     # product.price = params[:price] || product.price
@@ -40,10 +41,10 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    unless Product.destroy_by(id: params[:id]) == []
+    product = Product.find_by(id: params[:id])
+    message = "No such product."
+    if product && product.destroy
       message = "Product #{params[:id]} deleted."
-    else
-      message = "No such product."
     end
     render json: {message: message}
   end
