@@ -40,8 +40,7 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    if Product.find_by(id: params[:id])
-      Product.destroy(params[:id])
+    unless Product.destroy_by(id: params[:id]) == []
       message = "Product #{params[:id]} deleted."
     else
       message = "No such product."
