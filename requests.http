@@ -1,1 +1,15 @@
-GET http://localhost:3000/
+GET http://localhost:3000/products
+
+###
+GET http://localhost:3000/products/3
+
+###
+POST http://localhost:3000/products
+content-type: application/json
+
+{
+	"name": "Reese's Crunchy Cookie Cup",
+  "price": 1,
+  "description": "Peanut butter, chocolate cookie, milk chocolate",
+  "image_url": "https://i.pinimg.com/originals/00/2f/5e/002f5e8ad34dcbb53bfe4e28a6c7538f.jpg"
+} 
