@@ -1,7 +1,7 @@
 GET http://localhost:3000/products
 
 ###
-GET http://localhost:3000/products/11
+GET http://localhost:3000/products/18
 
 ###
 POST http://localhost:3000/products
@@ -15,7 +15,7 @@ content-type: application/json
 } 
 
 ###
-PATCH http://localhost:3000/products/13
+PATCH http://localhost:3000/products/18
 content-type: application/json
 
 {
