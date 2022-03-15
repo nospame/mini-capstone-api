@@ -92,6 +92,7 @@ GEM
     io-wait (0.2.1)
     irb (1.4.1)
       reline (>= 0.3.0)
+    jb (0.8.0)
     loofah (2.14.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -190,6 +191,7 @@ DEPENDENCIES
   bootsnap
   debug
   faker!
+  jb
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors
