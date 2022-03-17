@@ -8,19 +8,22 @@ POST http://localhost:3000/products.json
 content-type: application/json
 
 {
-	"name": "Reese's Crunchy Cookie Cup",
+	"name": "Someone Else's Cookie Cup",
   "price": 1,
   "description": "Peanut butter, chocolate cookie, milk chocolate",
-  "image_url": "https://i.pinimg.com/originals/00/2f/5e/002f5e8ad34dcbb53bfe4e28a6c7538f.jpg"
+  "image_url": "https://i.pinimg.com/originals/00/2f/5e/002f5e8ad34dcbb53bfe4e28a6c7538f.jpg",
+  "quantity": 7
 } 
 
 ###
-PATCH http://localhost:3000/products/19.json
+PATCH http://localhost:3000/products/10.json
 content-type: application/json
 
 {
-	"name": "Hershey's Chocolate Cup",
-  "price": 2
+	"name": "Hershey's Cup",
+  "price": 0.5,
+  "quantity": 0,
+  "description": "An average sized description"
 } 
 
 ###
