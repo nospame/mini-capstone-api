@@ -1,7 +1,16 @@
+### INDEX
 GET http://localhost:3000/products.json
+
+###
+GET http://localhost:3000/suppliers.json
+
 
 ### SHOW
 GET http://localhost:3000/products/18.json
+
+###
+GET http://localhost:3000/suppliers/2.json
+
 
 ### CREATE
 POST http://localhost:3000/products.json
@@ -16,6 +25,17 @@ content-type: application/json
 } 
 
 ###
+POST http://localhost:3000/suppliers.json
+content-type: application/json
+
+{
+  "name": "Apple Computer",
+  "email": "info@apple.com",
+  "phone_number": "555-5555"
+}
+
+
+### UPDATE
 PATCH http://localhost:3000/products/10.json
 content-type: application/json
 
@@ -27,4 +47,17 @@ content-type: application/json
 } 
 
 ###
+PATCH http://localhost:3000/suppliers/5
+content-type: application/json
+
+{
+  "name": "Microsoft",
+  "email": "info@microsoft.net"
+}
+
+
+### DESTROY
 DELETE http://localhost:3000/products/19.json
+
+###
+DELETE http://localhost:3000/suppliers/5
