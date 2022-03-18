@@ -12,6 +12,10 @@ GET http://localhost:3000/products/4.json
 GET http://localhost:3000/suppliers/2.json
 
 
+###
+GET http://localhost:3000/suppliers/2.json
+
+
 ### CREATE
 POST http://localhost:3000/products.json
 content-type: application/json

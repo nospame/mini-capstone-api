@@ -1,0 +1,11 @@
+@suppliers.map do |supplier|
+  {
+    id: supplier.id,
+    name: supplier.name,
+    email: supplier.email,
+    phone_number: supplier.phone_number,
+    products: supplier.products,
+    created_at: supplier.created_at,
+    updated_at: supplier.updated_at
+  }
+end
