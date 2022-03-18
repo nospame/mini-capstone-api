@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  # Remember to add supplier ID and has_many/belongs_to!
+
   def index
     @products = Product.all
     render template: "products/index"
@@ -16,7 +18,9 @@ class ProductsController < ApplicationController
       description: params[:description],
       quantity: params[:quantity] || 0
     )
-    @product.images.new(url: params[:image_url])
+    params[:images].each do |image|
+      @product.images.new(url: image)
+    end
     if @product.save
       render template: "products/show"
     else
@@ -30,7 +34,9 @@ class ProductsController < ApplicationController
     @product.price = params[:price] || @product.price
     @product.description = params[:description] || @product.description
     @product.quantity = params[:quantity] || @product.quantity
-    params[:image_url] && @product.images.new(url: params[:image_url])
+    params[:images].each do |image|
+      @product.images.new(url: image)
+    end
     if @product.save
       render template: "products/show"
     else
