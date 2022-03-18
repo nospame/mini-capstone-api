@@ -14,9 +14,9 @@ class ProductsController < ApplicationController
       name: params[:name],
       price: params[:price].to_i,
       description: params[:description],
-      image_url: params[:image_url],
       quantity: params[:quantity] || 0
     )
+    @product.images.new(url: params[:image_url])
     if @product.save
       render template: "products/show"
     else
@@ -29,8 +29,8 @@ class ProductsController < ApplicationController
     @product.name = params[:name] || @product.name
     @product.price = params[:price] || @product.price
     @product.description = params[:description] || @product.description
-    @product.image_url = params[:image_url] || @product.image_url
     @product.quantity = params[:quantity] || @product.quantity
+    params[:image_url] && @product.images.new(url: params[:image_url])
     if @product.save
       render template: "products/show"
     else

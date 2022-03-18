@@ -25,7 +25,7 @@ POST http://localhost:3000/products.json
 content-type: application/json
 
 {
-	"name": "Someone Else's Cookie Cup",
+	"name": "Another Crunchy Cookie Cup",
   "price": 1,
   "description": "Peanut butter, chocolate cookie, milk chocolate",
   "image_url": "https://i.pinimg.com/originals/00/2f/5e/002f5e8ad34dcbb53bfe4e28a6c7538f.jpg",
@@ -51,7 +51,8 @@ content-type: application/json
 	"name": "Hershey's Cup",
   "price": 0.5,
   "quantity": 0,
-  "description": "An average sized description"
+  "description": "An average sized description",
+  "image_url": "example.jpg"
 } 
 
 ###
