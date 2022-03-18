@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
       price: params[:price].to_i,
       description: params[:description],
       image_url: params[:image_url],
-      quantity: params[:quantity]
+      quantity: params[:quantity] || 0
     )
     if @product.save
       render template: "products/show"
