@@ -1,14 +1,14 @@
 ### INDEX
 GET http://localhost:3000/products.json
 
-###
+### Suppliers
 GET http://localhost:3000/suppliers.json
 
 
-### SHOW
+### SHOW Products
 GET http://localhost:3000/products/4.json
 
-###
+### Suppliers
 GET http://localhost:3000/suppliers/2.json
 
 
@@ -70,3 +70,16 @@ DELETE http://localhost:3000/products/13.json
 
 ###
 DELETE http://localhost:3000/suppliers/6
+
+
+### CREATE Users
+
+POST http://localhost:3000/users
+content-type: application/json
+
+{
+  "name": "kevin",
+  "email": "kevin@cats.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
