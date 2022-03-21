@@ -1,5 +1,6 @@
 ### INDEX
 GET http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDc5NzEyNzh9.u-2Xi2omi4JV2CbZXZJAXXzvVYI3_kpMzh73CWmhP7o
 
 ### Suppliers
 GET http://localhost:3000/suppliers.json
@@ -78,8 +79,17 @@ POST http://localhost:3000/users
 content-type: application/json
 
 {
-  "name": "kevin",
-  "email": "kevin@cats.com",
+  "name": "cleocatra",
+  "email": "cleo@cats.com",
   "password": "password",
   "password_confirmation": "password"
+}
+
+### CREATE Session
+Post http://localhost:3000/sessions
+content-type: application/json
+
+{
+  "email": "cleo@cats.com",
+  "password": "password"
 }

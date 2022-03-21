@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   # Remember to add supplier ID and has_many/belongs_to!
 
   def index
+    pp current_user
     @products = Product.all
     render template: "products/index"
   end
