@@ -7,17 +7,9 @@ GET http://localhost:3000/suppliers.json
 
 
 ### SHOW Products
-GET http://localhost:3000/products/4.json
+GET http://localhost:3000/products/11.json
 
 ### Suppliers
-GET http://localhost:3000/suppliers/2.json
-
-
-###
-GET http://localhost:3000/suppliers/2.json
-
-
-###
 GET http://localhost:3000/suppliers/2.json
 
 
@@ -93,3 +85,20 @@ content-type: application/json
   "email": "cleo@cats.com",
   "password": "password"
 }
+
+### CREATE Order
+POST http://localhost:3000/orders.json
+content-type: application/json
+
+{
+  "product_id": 11,
+  "quantity": 1
+}
+
+### INDEX Order
+GET http://localhost:3000/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgwNTU0MjJ9.t8vZu0TevAZQbvrpMX1TYRWDlZf_gMXAAriH8zgOf7c
+
+### SHOW Order
+GET http://localhost:3000/orders/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgwNTU0MjJ9.t8vZu0TevAZQbvrpMX1TYRWDlZf_gMXAAriH8zgOf7c
