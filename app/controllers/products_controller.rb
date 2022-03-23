@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  # Remember to add supplier ID and has_many/belongs_to!
+  before_action :authenticate_admin, only: [:create, :update, :destroy]
 
   def index
     pp current_user
