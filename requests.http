@@ -88,6 +88,7 @@ content-type: application/json
 
 ### CREATE Order
 POST http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgwNjM3Nzh9.JwLNNDSpsq_5u3G1O-7_zrJflUdSecerRbEcpMA9lH0
 content-type: application/json
 
 {
@@ -96,9 +97,8 @@ content-type: application/json
 }
 
 ### INDEX Order
-GET http://localhost:3000/orders
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgwNTU0MjJ9.t8vZu0TevAZQbvrpMX1TYRWDlZf_gMXAAriH8zgOf7c
+GET http://localhost:3000/orders.json
+
 
 ### SHOW Order
-GET http://localhost:3000/orders/2
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgwNTU0MjJ9.t8vZu0TevAZQbvrpMX1TYRWDlZf_gMXAAriH8zgOf7c
+GET http://localhost:3000/orders/19.json
