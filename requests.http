@@ -84,7 +84,7 @@ Post http://localhost:3000/sessions
 content-type: application/json
 
 {
-  "email": "kevin@cats.com",
+  "email": "cleo@cats.com",
   "password": "password"
 }
 
@@ -106,8 +106,26 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgxNDI1M
 ### SHOW Order
 GET http://localhost:3000/orders/19.json
 
-###
-# CLEO eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgxNDI1MjZ9.LzawD2pp1BHyQFWUGhmscqzG0GaslUxwcSqHnVNsoFE
+### INDEX CartedProduct
+GET http://localhost:3000/carted_products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgzMjIxOTZ9.1gH3RYNl-WKHibQUxIyCZtY7i80Vs66qdHiny7cG1IY
 
-# KEVIN
-# eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgxNDI1ODh9.ybxtaYbY_vkhsrHr7DXz1pOC2CodzKfHHSd9nDoarmk
+###
+POST http://localhost:3000/carted_products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMjE2OTJ9.4OSLPDM2GMbeHstiywZEeBXlYGjSlwtfBrbNb5O7t3U
+content-type: application/json
+
+{
+  "product_id": 1,
+  "quantity": 3
+}
+
+###
+PATCH http://localhost:3000/carted_products/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMjE2OTJ9.4OSLPDM2GMbeHstiywZEeBXlYGjSlwtfBrbNb5O7t3U
+content-type: application/json
+
+{
+  "quantity": 1,
+  "status": "removed"
+}
