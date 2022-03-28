@@ -17,17 +17,17 @@ class OrdersController < ApplicationController
 
   def create
     carted_products = CartedProduct.where(user_id: current_user.id, status: "carted")
-    order = Order.new(
+    @order = Order.new(
       user_id: current_user.id
     )
   
     carted_products.each do |cp|
-      order.subtotal += cp.product.price
-      order.tax += cp.product.tax
-      order.total += cp.product.total
+      @order.subtotal += cp.product.price
+      @order.tax += cp.product.tax
+      @order.total += cp.product.total
     end
 
-    order.save
+    @order.save
 
     carted_products.each do |cp|
       cp.status = "purchased"
@@ -35,6 +35,6 @@ class OrdersController < ApplicationController
       cp.save
     end
 
-    render json: {order: order.as_json}
+    render template: "orders/show"
   end
 end

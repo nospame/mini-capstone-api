@@ -123,5 +123,5 @@ content-type: application/json
 }
 
 ###
-POST http://localhost:3000/orders
+POST http://localhost:3000/orders.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDg1NzAyMjV9.aDJi4souz7F0ltTBtTYC1qQYQNXW7FjaROiAuOKMJMQ
