@@ -88,44 +88,40 @@ content-type: application/json
   "password": "password"
 }
 
-### CREATE Order
-POST http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgxNDI1ODh9.ybxtaYbY_vkhsrHr7DXz1pOC2CodzKfHHSd9nDoarmk
-content-type: application/json
-
-{
-  "product_id": 11,
-  "quantity": 1
-}
 
 ### INDEX Order
 GET http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgxNDI1MjZ9.LzawD2pp1BHyQFWUGhmscqzG0GaslUxwcSqHnVNsoFE
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDg1NzAyMjV9.aDJi4souz7F0ltTBtTYC1qQYQNXW7FjaROiAuOKMJMQ
 
 
 ### SHOW Order
-GET http://localhost:3000/orders/19.json
+GET http://localhost:3000/orders/25.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDg1NzAyMjV9.aDJi4souz7F0ltTBtTYC1qQYQNXW7FjaROiAuOKMJMQ
+
 
 ### INDEX CartedProduct
 GET http://localhost:3000/carted_products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDgzMjIxOTZ9.1gH3RYNl-WKHibQUxIyCZtY7i80Vs66qdHiny7cG1IY
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDg1NzAyMjV9.aDJi4souz7F0ltTBtTYC1qQYQNXW7FjaROiAuOKMJMQ
 
 ###
 POST http://localhost:3000/carted_products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMjE2OTJ9.4OSLPDM2GMbeHstiywZEeBXlYGjSlwtfBrbNb5O7t3U
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDg1NzAyMjV9.aDJi4souz7F0ltTBtTYC1qQYQNXW7FjaROiAuOKMJMQ
 content-type: application/json
 
 {
-  "product_id": 1,
+  "product_id": 6,
   "quantity": 3
 }
 
 ###
-PATCH http://localhost:3000/carted_products/4
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMjE2OTJ9.4OSLPDM2GMbeHstiywZEeBXlYGjSlwtfBrbNb5O7t3U
+PATCH http://localhost:3000/carted_products/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDg1NzAyMjV9.aDJi4souz7F0ltTBtTYC1qQYQNXW7FjaROiAuOKMJMQ
 content-type: application/json
 
 {
-  "quantity": 1,
-  "status": "removed"
+  "quantity": 2
 }
+
+###
+POST http://localhost:3000/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDg1NzAyMjV9.aDJi4souz7F0ltTBtTYC1qQYQNXW7FjaROiAuOKMJMQ

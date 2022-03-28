@@ -1,4 +1,12 @@
 class Order < ApplicationRecord
   belongs_to :user
-  belongs_to :product
+  has_many :carted_products
+  has_many :products, through: :carted_products
+
+  def ordered_products
+    ordered = carted_products.map do |cp| 
+      {product: cp.product.name, quantity: cp.quantity}
+    end
+    return ordered
+  end
 end

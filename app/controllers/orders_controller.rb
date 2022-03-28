@@ -16,19 +16,25 @@ class OrdersController < ApplicationController
   end
 
   def create
-    product = Product.find_by(id: params[:product_id])
-    quantity = params[:quantity].to_i
-    @order = Order.new(
-      user_id: current_user.id,
-      product_id: params[:product_id],
-      quantity: quantity,
-      subtotal: product.price * quantity,
-      tax: product.tax * quantity,
-      total: product.total * quantity
+    carted_products = CartedProduct.where(user_id: current_user.id, status: "carted")
+    order = Order.new(
+      user_id: current_user.id
     )
-    @order.save
-    product.quantity -= @order.quantity
-    product.save
-    render template: "orders/show"
+  
+    carted_products.each do |cp|
+      order.subtotal += cp.product.price
+      order.tax += cp.product.tax
+      order.total += cp.product.total
+    end
+
+    order.save
+
+    carted_products.each do |cp|
+      cp.status = "purchased"
+      cp.order_id = order.id
+      cp.save
+    end
+
+    render json: {order: order.as_json}
   end
 end

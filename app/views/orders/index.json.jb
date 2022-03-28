@@ -2,8 +2,7 @@
   {
     id: order.id,
     user_id: order.user_id,
-    product: order.product,
-    quantity: order.quantity,
+    ordered_products: order.ordered_products,
     subtotal: order.subtotal,
     tax: order.tax,
     total: order.total,
