@@ -22,9 +22,9 @@ class OrdersController < ApplicationController
     )
   
     carted_products.each do |cp|
-      @order.subtotal += cp.product.price
-      @order.tax += cp.product.tax
-      @order.total += cp.product.total
+      @order.subtotal += cp.product.price * cp.quantity
+      @order.tax += cp.product.tax * cp.quantity
+      @order.total += cp.product.total * cp.quantity
     end
 
     @order.save
