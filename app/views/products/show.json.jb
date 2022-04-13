@@ -8,6 +8,7 @@
   tax: @product.tax,
   total: @product.total,
   quantity: @product.quantity,
+  supplier_id: @product.supplier_id,
   supplier: @product.supplier,
   created_at: @product.created_at,
   updated_at: @product.updated_at

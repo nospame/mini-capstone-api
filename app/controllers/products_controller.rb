@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :authenticate_admin, only: [:create, :update, :destroy]
+  # before_action :authenticate_user, only: [:create, :update, :destroy]
   
   def index
     pp current_user
@@ -35,8 +35,9 @@ class ProductsController < ApplicationController
     @product.price = params[:price] || @product.price
     @product.description = params[:description] || @product.description
     @product.quantity = params[:quantity] || @product.quantity
-    params[:images].each do |image|
-      @product.images.new(url: image)
+    @product.supplier_id = params[:supplier_id] || @product.supplier_id
+    params[:new_images].each do |new_image|
+      @product.images.new(url: new_image)
     end
     if @product.save
       render template: "products/show"
