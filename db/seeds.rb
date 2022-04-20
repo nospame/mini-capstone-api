@@ -20,6 +20,7 @@
 #   {name: "Yet another crunchy cookie cup", price: "1.75", description: "Peanut butter, chocolate cookie, milk chocolate", quantity: 7, supplier_id: nil},
 #   {name: "Polaroid", price: "40.0", description: "An old camera to take instant pictures. Or maybe they make new ones?", quantity: 13, supplier_id: 3}
 # ])
+Image.destroy_all
 Image.create!([
   {url: "https://bloomscape.com/wp-content/uploads/2020/03/bloomscape_ficus-little-fiddle_charcoal-e1625250864922.jpg", product_id: 6},
   {url: "https://images.squarespace-cdn.com/content/v1/52e56f16e4b0d1eb5c77cfbf/1525467849214-VGM0KT7H15VYZ83TMRYQ/First+I+Drink+the+Coffee+-+Stash+Style+Ceramic+Mug.jpg?format=1500w", product_id: 1},
@@ -31,8 +32,8 @@ Image.create!([
   {url: "https://i.pinimg.com/originals/00/2f/5e/002f5e8ad34dcbb53bfe4e28a6c7538f.jpg", product_id: 7},
   {url: "https://media.istockphoto.com/photos/creative-idea-layout-fresh-banana-with-yellow-retro-telephone-on-picture-id980647564?k=20&m=980647564&s=612x612&w=0&h=k7FST86YLnyc9KgYjp1bxylJybTHZTrjckTHsJYfZe8=", product_id: 4},
   {url: "https://www.eitanbernath.com/wp-content/uploads/2020/02/Reeses-Peanut-Butter-Cups-1-LOWRES.jpeg", product_id: 7},
-  {url: "http://s7d2.scene7.com/is/image/hersheysassets/0_34000_00440_9_701_44000_136_Item_Front?fmt=png-alpha&hei=3000", product_id: 7}
-  {url: "http://s7d2.scene7.com/is/image/hersheysassets/0_34000_00440_9_701_44000_136_Item_Front?fmt=png-alpha&hei=3000", product_id: 7}
+  {url: "http://s7d2.scene7.com/is/image/hersheysassets/0_34000_00440_9_701_44000_136_Item_Front?fmt=png-alpha&hei=3000", product_id: 7},
+  {url: "http://s7d2.scene7.com/is/image/hersheysassets/0_34000_00440_9_701_44000_136_Item_Front?fmt=png-alpha&hei=3000", product_id: 7},
   {url: "https://cdn.shopify.com/s/files/1/1135/7914/products/New-colors-PDP-b_w-front-tilted_800x.png?v=1622014385", product_id: 2},
   {url: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1612970973-polaroid-originals-onestep-1612970962.jpg", product_id: 2}
 ])
