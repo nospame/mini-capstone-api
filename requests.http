@@ -100,18 +100,18 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTA1NjI1N
 GET https://quiet-anchorage-92191.herokuapp.com/carted_products
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTA1NjI1NTR9.D6ocWq2bvFQo0L9N5gTVy25cfg6DmmLZoudMsNqwLwg
 
-###
-POST https://quiet-anchorage-92191.herokuapp.com/carted_products
+### CREATE CartedProduct
+POST http://localhost:3000/carted_products
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTA1NjI1NTR9.D6ocWq2bvFQo0L9N5gTVy25cfg6DmmLZoudMsNqwLwg
 content-type: application/json
 
 {
-  "product_id": 6,
+  "product_id": 18,
   "quantity": 3
 }
 
 ###
-PATCH https://quiet-anchorage-92191.herokuapp.com/7.json
+PATCH https://quiet-anchorage-92191.herokuapp.com/carted?products/7.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDg1NzAyMjV9.aDJi4souz7F0ltTBtTYC1qQYQNXW7FjaROiAuOKMJMQ
 content-type: application/json
 

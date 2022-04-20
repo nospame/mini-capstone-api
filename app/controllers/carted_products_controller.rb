@@ -2,8 +2,8 @@ class CartedProductsController < ApplicationController
   before_action :authenticate_user
   
   def index
-    carted_products = CartedProduct.where(user_id: current_user.id, status: "carted")
-    render json: carted_products.as_json
+    @carted_products = CartedProduct.where(user_id: current_user.id, status: "carted")
+    render template: "carted_products/index"
   end
 
   def create
