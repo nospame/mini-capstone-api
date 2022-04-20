@@ -14,15 +14,16 @@ GET http://localhost:3000/suppliers/2.json
 
 
 ### CREATE
-POST http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDk4NzA0OTh9.dOtudDxCuVSi0vLd2eUFZq1ONu_PRf68Q7PzNbs2ZHk
+# POST http://localhost:3000/products.json
+POST https://quiet-anchorage-92191.herokuapp.com/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTA1NjI1NTR9.D6ocWq2bvFQo0L9N5gTVy25cfg6DmmLZoudMsNqwLwg
 content-type: application/json
 
 {
-	"name": "Another crunchy cookie cup",
-  "price": 1,
-  "description": "Peanut butter, chocolate cookie, milk chocolate",
-  "images": ["https://i.pinimg.com/originals/00/2f/5e/002f5e8ad34dcbb53bfe4e28a6c7538f.jpg", "https://www.eitanbernath.com/wp-content/uploads/2020/02/Reeses-Peanut-Butter-Cups-1-LOWRES.jpeg", "https://www.inthekitchenwithmatt.com/wp-content/uploads/2019/12/Better-Than-Reeses-Peanut-Butter-Cups-500x500.jpg"],
+	"name": "Cellular Telephone",
+  "price": 185.99,
+  "description": "Make calls with it, or realistically just text and browse the internet",
+  "images": ["https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fshavitech.com%2Fwp-content%2Fuploads%2F2018%2F11%2FCell-Phone-WhatsApp-1-1024x682.jpg", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fepmgaa.media.clients.ellingtoncms.com%2Fimg%2Fcroppedphotos%2F2013%2F07%2F01%2FS023785885.jpg"],
   "quantity": 7
 } 
 
@@ -37,17 +38,13 @@ content-type: application/json
 }
 
 
-### UPDATE
-PATCH http://localhost:3000/products/16.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDk4NzA0OTh9.dOtudDxCuVSi0vLd2eUFZq1ONu_PRf68Q7PzNbs2ZHk
+### UPDATE Product
+PATCH https://quiet-anchorage-92191.herokuapp.com/products/9.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTA1NjI1NTR9.D6ocWq2bvFQo0L9N5gTVy25cfg6DmmLZoudMsNqwLwg
 content-type: application/json
 
 {
-	"name": "Hershey's Cup of Peanut Butter",
-  "price": 0.5,
-  "quantity": 0,
-  "description": "An average sized description",
-  "images": ["http://s7d2.scene7.com/is/image/hersheysassets/0_34000_00440_9_701_44000_136_Item_Front?fmt=png-alpha&hei=3000"]
+  "new_images": ["https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi5.walmartimages.com%2Fasr%2F642f9f9e-4cf9-475b-a1ba-859c70c233e9_1.6c6bc6a4d17c4ca964b7d81f4f450267.jpeg"]
 } 
 
 ###
@@ -80,7 +77,7 @@ content-type: application/json
 }
 
 ### CREATE Session
-Post http://localhost:3000/sessions
+Post https://quiet-anchorage-92191.herokuapp.com/sessions.json
 content-type: application/json
 
 {
@@ -90,22 +87,22 @@ content-type: application/json
 
 
 ### INDEX Order
-GET http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDg1NzAyMjV9.aDJi4souz7F0ltTBtTYC1qQYQNXW7FjaROiAuOKMJMQ
+GET https://quiet-anchorage-92191.herokuapp.com/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTA1NjI1NTR9.D6ocWq2bvFQo0L9N5gTVy25cfg6DmmLZoudMsNqwLwg
 
 
 ### SHOW Order
-GET http://localhost:3000/orders/25.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDg1NzAyMjV9.aDJi4souz7F0ltTBtTYC1qQYQNXW7FjaROiAuOKMJMQ
+GET https://quiet-anchorage-92191.herokuapp.com/orders/7.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTA1NjI1NTR9.D6ocWq2bvFQo0L9N5gTVy25cfg6DmmLZoudMsNqwLwg
 
 
 ### INDEX CartedProduct
-GET http://localhost:3000/carted_products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDg1NzAyMjV9.aDJi4souz7F0ltTBtTYC1qQYQNXW7FjaROiAuOKMJMQ
+GET https://quiet-anchorage-92191.herokuapp.com/carted_products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTA1NjI1NTR9.D6ocWq2bvFQo0L9N5gTVy25cfg6DmmLZoudMsNqwLwg
 
 ###
-POST http://localhost:3000/carted_products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDg1NzAyMjV9.aDJi4souz7F0ltTBtTYC1qQYQNXW7FjaROiAuOKMJMQ
+POST https://quiet-anchorage-92191.herokuapp.com/carted_products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTA1NjI1NTR9.D6ocWq2bvFQo0L9N5gTVy25cfg6DmmLZoudMsNqwLwg
 content-type: application/json
 
 {
@@ -114,7 +111,7 @@ content-type: application/json
 }
 
 ###
-PATCH http://localhost:3000/carted_products/6
+PATCH https://quiet-anchorage-92191.herokuapp.com/7.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDg1NzAyMjV9.aDJi4souz7F0ltTBtTYC1qQYQNXW7FjaROiAuOKMJMQ
 content-type: application/json
 
